@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hub | Welcome</title>
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a29bfe;
+      --dark: #2d3436;
+      --light: #f8f9fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: var(--dark);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Content Layout */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact Form Section */
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #5b4bc4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--dark);
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">My Space</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to My Official Website</h1>
+    <p>Check out my latest projects, articles, and updates below!</p>
+  </section>
+
+  <div class="container">
+    
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hey there! Welcome to my home on the web. I created this site to showcase my work and talk about things I love.</p>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-top: 2rem;">Featured Content</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project 1</h3>
+          <p>This is a description of a cool project or hobby I am currently working on.</p>
+        </div>
+        <div class="card">
+          <h3>Project 2</h3>
+          <p>Details about another topic, game, or art piece I created recently.</p>
+        </div>
+        <div class="card">
+          <h3>Favorites List</h3>
+          <p>A place where I share my favorite music, movies, or games with everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" style="margin-top: 3rem;">
+      <h2>Latest Blog Posts</h2>
+      <div class="card" style="margin-top: 1rem;">
+        <h3>My First Blog Post</h3>
+        <p style="color: #777; font-size: 0.9rem;">Posted on: Today</p>
+        <p style="margin-top: 0.5rem;">This is where you can write longer articles or stories for your friends to read on their phones.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+      <h2>Send Me a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+        </div>
+        <button type="button" onclick="alert('Message sent!')">Send</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 My Personal Website. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
